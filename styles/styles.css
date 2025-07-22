@@ -1,0 +1,20 @@
+html {
+  background-image: url("../global/FONDO.png");
+}
+
+nav {
+  background-color: rgba(50, 254, 33, 0.85);
+  width: 100%;
+  height: 6vh;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.nav_menu {
+  background-color: rgba(50, 254, 33, 0.85);
+  border-radius: 3px;
+  width: 5vw;
+  height: 5vh;
+}/*# sourceMappingURL=styles.css.map */
