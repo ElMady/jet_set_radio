@@ -1,6 +1,8 @@
 @use './mixins/mixins.scss' as mix;
+@use './button/button.scss';
 html{
     background-image: url("../global/FONDO.png");   
+    
 }
 
 nav{
@@ -17,6 +19,9 @@ nav{
     
 }
 
+#barras{
+    color: black;
+}
 
   
     

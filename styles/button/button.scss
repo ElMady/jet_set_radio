@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* Estilos básicos */
 body {
   font-family: Arial, sans-serif;
@@ -11,7 +10,7 @@ body {
 }
 
 .menu-button {
-  background-color: rgb(50, 254, 33);
+  background-color: rgba(50, 254, 33);
   color: white;
   padding: 10px 20px;
   border: none;
@@ -30,7 +29,7 @@ body {
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
   list-style: none;
   padding: 0;
@@ -38,6 +37,7 @@ body {
   border-radius: 4px;
   overflow: hidden;
   right: 0%;
+  
 }
 
 .submenu li a {
@@ -56,28 +56,3 @@ body {
 .submenu.show {
   display: block;
 }
-
-html {
-  background-image: url("../global/FONDO.png");
-}
-
-nav {
-  background-color: rgba(50, 254, 33, 0.85);
-  width: 100%;
-  height: 6vh;
-  align-items: center;
-  justify-content: space-between;
-  display: flex;
-  box-sizing: border-box;
-}
-
-.nav_menu {
-  background-color: rgba(50, 254, 33, 0.85);
-  border-radius: 3px;
-  width: 5vw;
-  height: 5vh;
-}
-
-#barras {
-  color: black;
-}/*# sourceMappingURL=styles.css.map */

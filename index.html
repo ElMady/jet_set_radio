@@ -6,13 +6,27 @@
     <title>jet_set_radio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./styles/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=10">
+
 </head>
 <body>
     <nav>
-        <img class="nav_logo" src="../jet_set_radio/global/logo.svg">
-        <div><button class="nav_menu"><i class="fa-solid fa-bars"></i></button></div>
+        <img class="nav_logo" src="./global/logo.svg">      
+        <div class="menu-container">
+            <button class="menu-button"  id="menu-button"><i id="barras" class="fa-solid fa-bars "></i></button>
+             <ul id="submenu" class="submenu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Characters</a></li>
+                <li><a href="#">Store</a></li>
+                <li><a href="#">Opción 4</a></li>
+            </ul>
+
+        </div>
     </nav>
-    <div class="img_rel"></div>
-    
+
+
+     
+    <script type="module"  src='./components/JavaScript/main.js'></script>
 </body>
 </html>
