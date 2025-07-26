@@ -1,6 +1,7 @@
 @use './mixins/mixins.scss' as mix;
 @use './button/button.scss';
-html{
+@use './carusel/carusel.scss';
+body{
     background-image: url("../global/FONDO.png");   
     
 }
@@ -8,11 +9,12 @@ html{
 nav{
     background-color: rgba(50, 254, 33, 0.85);
     @include mix.flexcontainer(100%,6vh,center,space-between);
+    margin-bottom: 20px;
 }
 
 
 .nav_menu{
-    background-color: rgba(50, 254, 33, 0.85);
+    background-color: (#32fe2180);
     border-radius: 3px;
     width: 5vw;
     height: 5vh;
@@ -20,7 +22,7 @@ nav{
 }
 
 #barras{
-    color: black;
+    color: (#f7af0c);
 }
 
   

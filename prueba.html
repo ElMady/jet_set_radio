@@ -4,19 +4,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Menú desplegable</title>
-  <link rel="stylesheet" href="./styles/button/button.css">
+  <link rel="stylesheet" href="./styles/carusel/carusel.css">
 </head>
 <body>
-  <div class="menu-container">
-    <button id="menu-button" class="menu-button">Menú Principal</button>
-    <ul id="submenu" class="submenu">
-      <li><a href="#">Opción 1</a></li>
-      <li><a href="#">Opción 2</a></li>
-      <li><a href="#">Opción 3</a></li>
-      <li><a href="#">Opción 4</a></li>
-    </ul>
-  </div>
+   <div class="carrusel">
+        <div class="carrusel-inner">
+            <div class="carrusel-item">
+                <img src="./global/jet set radio.jpg" alt="Beat">
+            </div>
+            <div class="carrusel-item" id="rojo">
+                <img src="./global/ed1a2e3e9a9d22ed64ce1e421bb171ce.jpg" alt="Girl">
+            </div>
+            <div class="carrusel-item">
+                <img src="imagen3.jpg" alt="Imagen 3">
+            </div>
+        </div>
+        
+        <!-- Controles -->
+        <button class="carrusel-control prev">&#10094;</button>
+        <button class="carrusel-control next">&#10095;</button>
+        
+        <!-- Indicadores -->
+        <div class="carrusel-indicadores">
+    <!-- Indicador 1 (activo por defecto) -->
+          <img class="indicador active" data-slide-to="0"  width="50" height="50" src="./global/dibujo.svg">
+        </img>
+    
+    <!-- Indicador 2 -->
+          <svg class="indicador" data-slide-to="1" width="20" height="20" viewBox="0 0 24 24">
+              <rect x="2" y="2" width="20" height="20" rx="4" fill="currentColor" />
+          </svg>
+          
+          <!-- Indicador 3 -->
+          <svg class="indicador" data-slide-to="2" width="20" height="20" viewBox="0 0 24 24">
+              <polygon points="12,2 22,12 12,22 2,12" fill="currentColor" />
+          </svg>
+        </div>
+    </div>
+  
 
-  <script src="./components/JavaScript/menu.js"></script>
+  <!--<script src="./components/JavaScript/carusel.js"></script> !-->
 </body>
 </html>

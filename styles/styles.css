@@ -28,7 +28,7 @@ body {
 .submenu {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: rgba(247, 175, 12, 0.5019607843);
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -57,7 +57,83 @@ body {
   display: block;
 }
 
-html {
+.carrusel {
+  position: relative;
+  max-width: 50vh;
+  max-height: 60%;
+  margin: auto;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.carrusel-inner {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carrusel-item {
+  min-width: 100%;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.carrusel-item img {
+  width: 40vw;
+  height: 40vh;
+}
+
+.carrusel-control {
+  position: absolute;
+  top: 50%;
+  background-color: rgba(247, 175, 12, 0.5019607843);
+  color: rgba(255, 101, 9, 0.5019607843);
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 18px;
+  z-index: 10;
+}
+
+.carrusel-control.prev {
+  left: 10px;
+}
+
+.carrusel-control.next {
+  right: 10px;
+}
+
+.carrusel-control:hover {
+  background-color: #f7af0c;
+}
+
+.carrusel-indicadores {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.indicador {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(50, 254, 33, 0.5019607843);
+  cursor: pointer;
+}
+
+.indicador.active {
+  background-color: #32fe21;
+  display: flex;
+}
+
+body {
   background-image: url("../global/FONDO.png");
 }
 
@@ -69,15 +145,16 @@ nav {
   justify-content: space-between;
   display: flex;
   box-sizing: border-box;
+  margin-bottom: 20px;
 }
 
 .nav_menu {
-  background-color: rgba(50, 254, 33, 0.85);
+  background-color: rgba(50, 254, 33, 0.5019607843);
   border-radius: 3px;
   width: 5vw;
   height: 5vh;
 }
 
 #barras {
-  color: black;
+  color: #f7af0c;
 }/*# sourceMappingURL=styles.css.map */
