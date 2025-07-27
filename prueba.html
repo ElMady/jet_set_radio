@@ -4,45 +4,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Menú desplegable</title>
-  <link rel="stylesheet" href="./styles/carusel/carusel.css">
+  <link rel="stylesheet" href="./styles/music_player/music_player.css">
 </head>
 <body>
-   <div class="carrusel">
-        <div class="carrusel-inner">
-            <div class="carrusel-item">
-                <img src="./global/jet set radio.jpg" alt="Beat">
-            </div>
-            <div class="carrusel-item" id="rojo">
-                <img src="./global/ed1a2e3e9a9d22ed64ce1e421bb171ce.jpg" alt="Girl">
-            </div>
-            <div class="carrusel-item">
-                <img src="imagen3.jpg" alt="Imagen 3">
-            </div>
-        </div>
+   
+     <div class="player">
+        
+        
+        <!-- Audio -->
+        <audio id="audio"></audio>
         
         <!-- Controles -->
-        <button class="carrusel-control prev">&#10094;</button>
-        <button class="carrusel-control next">&#10095;</button>
-        
-        <!-- Indicadores -->
-        <div class="carrusel-indicadores">
-    <!-- Indicador 1 (activo por defecto) -->
-          <img class="indicador active" data-slide-to="0"  width="50" height="50" src="./global/dibujo.svg">
-        </img>
-    
-    <!-- Indicador 2 -->
-          <svg class="indicador" data-slide-to="1" width="20" height="20" viewBox="0 0 24 24">
-              <rect x="2" y="2" width="20" height="20" rx="4" fill="currentColor" />
-          </svg>
-          
-          <!-- Indicador 3 -->
-          <svg class="indicador" data-slide-to="2" width="20" height="20" viewBox="0 0 24 24">
-              <polygon points="12,2 22,12 12,22 2,12" fill="currentColor" />
-          </svg>
+        <div class="controls">
+            <button id="prev">⏮</button>
+            <button id="play">▶</button>
+            <button id="next">⏭</button>
         </div>
+        
+        <!-- Barra de progreso -->
+        <div class="progress-container">
+            <input type="range" id="progress" min="0" max="100" value="0">
+            <span id="current-time">0:00</span> / <span id="duration">0:00</span>
+        </div>
+        
+        <!-- Volumen -->
+        <div class="volume">
+            <span>🔊</span>
+            <input type="range" id="volume" min="0" max="1" step="0.1" value="0.7">
+        </div>
+        
+        <!-- Lista de canciones -->
+        <ul class="songs" id="songs">
+            <li data-src="cancion1.mp3">Canción 1</li>
+            <li data-src="cancion2.mp3">Canción 2</li>
+            <li data-src="cancion3.mp3">Canción 3</li>
+        </ul>
     </div>
-  
 
-  <!--<script src="./components/JavaScript/carusel.js"></script> !-->
+
+    <script src="./components/JavaScript/music.js"></script>
 </body>
 </html>

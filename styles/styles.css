@@ -64,6 +64,7 @@ body {
   margin: auto;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
 }
 
 .carrusel-inner {
@@ -133,6 +134,106 @@ body {
   display: flex;
 }
 
+.music_player_3d {
+  height: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.player {
+  background: rgba(228, 254, 3, 0.5019607843);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 50%;
+  max-height: 15vh;
+  overflow: hidden;
+}
+
+.controls {
+  border-radius: 10px;
+}
+
+.controls button {
+  background: #32fe21;
+  border-radius: 50px;
+  font-size: 20px;
+  cursor: pointer;
+  width: 7vw;
+}
+.controls button img {
+  width: 4vw;
+}
+
+.progress-container {
+  margin: 10px 0;
+}
+
+/* Estilo base del input range */
+#progress {
+  width: 100%;
+  -webkit-appearance: none; /* Elimina el estilo por defecto en Chrome/Safari */
+  width: 100%;
+  height: 6px;
+  background: #f7af0c; /* Color de fondo de la pista */
+  border-radius: 3px;
+  outline: none;
+}
+
+/* Thumb (el círculo deslizable) */
+#progress::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  background: #ff6509; /* Color del thumb */
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.2s;
+  border: 2px solid white;
+}
+
+.volume {
+  margin: 2px 0;
+}
+
+#volume {
+  -webkit-appearance: none; /* Elimina el estilo por defecto */
+  width: 50%;
+  height: 6px;
+  background: #32fe21;
+  border-radius: 3px;
+  outline: none;
+  transition: opacity 0.2s;
+}
+/* Thumb (control deslizante) */
+#volume::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  background: #2ecc71;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.songs {
+  list-style: none;
+  padding: 0;
+}
+
+.songs li {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+
+.songs li:hover {
+  background-color: #e4fe03;
+}
+
 body {
   background-image: url("../global/FONDO.png");
 }
@@ -150,8 +251,8 @@ nav {
 
 .nav_menu {
   background-color: rgba(50, 254, 33, 0.5019607843);
-  border-radius: 3px;
-  width: 5vw;
+  border-radius: 10px;
+  width: 15vw;
   height: 5vh;
 }
 
