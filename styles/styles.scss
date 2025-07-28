@@ -2,16 +2,19 @@
 @use './button/button.scss';
 @use './carusel/carusel.scss';
 @use './music_player/music_player.scss';
+@use './cinta/cinta.css';
 
 body{
     background-image: url("../global/FONDO.png");   
+    width: 100%;
+    padding: 0;
     
 }
 
 nav{
     background-color: rgba(50, 254, 33, 0.85);
     @include mix.flexcontainer(100%,6vh,center,space-between);
-    margin-bottom: 20px;
+   
 }
 
 
@@ -25,6 +28,23 @@ nav{
 
 #barras{
     color: (#f7af0c);
+}
+
+footer{
+    width: 100%;
+    height: 30%;
+    background-color: rgba(50, 254, 33, 0.85);
+    font-family: monospace;
+    font: 400;
+    font-size: 0.6rem;
+    & div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    & img{
+        height: 5vh;
+    }
 }
 
   

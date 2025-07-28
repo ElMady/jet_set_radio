@@ -1,47 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menú desplegable</title>
-  <link rel="stylesheet" href="./styles/music_player/music_player.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinta Desplazándose Horizontalmente</title>
+    <link rel="stylesheet" href="/styles/cinta/cinta.css">
 </head>
 <body>
-   
-     <div class="player">
-        
-        
-        <!-- Audio -->
-        <audio id="audio"></audio>
-        
-        <!-- Controles -->
-        <div class="controls">
-            <button id="prev">⏮</button>
-            <button id="play">▶</button>
-            <button id="next">⏭</button>
+    <div class="cinta-container">
+        <div class="cinta-contenido">
+            <span>最新ニュース： </span>
+            <span>Oferta especial este fin de semana - </span>
+            <span>Nuevos productos disponibles - </span>
+            <span>Mantente informado con nuestras actualizaciones - </span>
+            <span>Visita nuestra tienda online - </span>
         </div>
-        
-        <!-- Barra de progreso -->
-        <div class="progress-container">
-            <input type="range" id="progress" min="0" max="100" value="0">
-            <span id="current-time">0:00</span> / <span id="duration">0:00</span>
-        </div>
-        
-        <!-- Volumen -->
-        <div class="volume">
-            <span>🔊</span>
-            <input type="range" id="volume" min="0" max="1" step="0.1" value="0.7">
-        </div>
-        
-        <!-- Lista de canciones -->
-        <ul class="songs" id="songs">
-            <li data-src="cancion1.mp3">Canción 1</li>
-            <li data-src="cancion2.mp3">Canción 2</li>
-            <li data-src="cancion3.mp3">Canción 3</li>
-        </ul>
     </div>
 
-
-    <script src="./components/JavaScript/music.js"></script>
+    <script src="/components/JavaScript/cinta.js"></script>
 </body>
 </html>

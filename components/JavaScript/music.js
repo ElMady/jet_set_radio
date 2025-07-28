@@ -12,9 +12,11 @@ const songsList = document.getElementById('songs');
 
 // Lista de canciones (puedes agregar más)
 const songs = [
-    { title: "Canción 1", src: "/global/Music/Yu Yu Hakusho ; OP _ Hohoemi No Bakudan _ Sub. Español & Romaji. (AMV).mp3" },
-    { title: "Canción 2", src: "cancion2.mp3" },
-    { title: "Canción 3", src: "cancion3.mp3" }
+    { title: "Canción 1", src: '/global/Music/Sneakman.mp3' },
+    { title: "Canción 2", src: "/global/Music/Let Mom Sleep.mp3" },
+    { title: "Canción 3", src: "/global/Music/Reps - 'Bout the City.mp3" },
+    { title: "Canción 4", src: "/global/Music/Guitar Vader - Super Brothers.mp3" }
+
 ];
 
 let currentSongIndex = 0;
