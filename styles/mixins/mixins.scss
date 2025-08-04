@@ -39,7 +39,19 @@
 }
 
 @mixin phones{
-    @media screen and (max-width:412px){
+    @media  (max-width:430px){
         @content
     }
 }
+
+@mixin tv{
+    @media  (width:1360px)  {
+        @content
+    }
+}
+
+@mixin monitor{
+    @media  (min-width: 1920px){
+        @content
+    }   
+    }

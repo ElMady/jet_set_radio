@@ -1,9 +1,10 @@
+@use '../mixins/mixins.scss' as mix;
 
 .music_player_3d{
-    height: 35%;
+    min-height: 40vh;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .player {
     background: #e4fe0380;
@@ -11,8 +12,7 @@
     border-radius: 10px;
     //box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 50%;
-    max-height: 15vh;
+    width: 40%;
     overflow: hidden;
 }
 
@@ -106,4 +106,19 @@
 
 .songs li:hover {
     background-color: #e4fe03;
+}
+
+@include mix.phones{
+    .music_player_3d{
+        max-height: 15%;
+        width: 95%;
+        
+    }
+}
+
+@include mix.tv {
+    .player{
+        width: 45%;
+        height: 30vh;
+    }
 }

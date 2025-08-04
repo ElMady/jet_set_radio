@@ -1,0 +1,34 @@
+.about_us {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 80px;
+  height: 100%;
+  width: 100%;
+}
+.about_us div {
+  margin: 5px;
+  padding: 10px;
+}
+
+.spanish {
+  background-color: rgba(50, 254, 33, 0.5019607843);
+  width: 95%;
+}
+
+.english {
+  background-color: rgba(247, 175, 12, 0.5019607843);
+  width: 95%;
+}
+
+#logo-ax {
+  height: 25vh;
+}
+
+@media (max-width: 430px) {
+  .about_us {
+    height: 60%;
+    margin-top: 0;
+  }
+}/*# sourceMappingURL=about_us.css.map */

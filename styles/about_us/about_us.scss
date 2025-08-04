@@ -1,0 +1,43 @@
+@use '../mixins/mixins.scss' as mix;
+.about_us{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 80px;
+    height: 100%;
+    width: 100%;
+    
+    & div{
+        margin: 5px;
+        padding: 10px;
+        //box-sizing: border-box;
+    }
+   
+}
+
+.spanish{
+    background-color: (#32fe2180);
+    width: 95%;
+}
+.english{
+    background-color: (#f7af0c80);
+    width: 95%;
+}
+
+
+#logo-ax{
+    height: 25vh;
+}
+
+@include mix.phones{
+    .about_us{
+        height: 60%;
+        margin-top: 0;
+    }
+
+}
+
+@include mix.monitor{
+
+}

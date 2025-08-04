@@ -3,20 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cinta Desplazándose Horizontalmente</title>
-    <link rel="stylesheet" href="/styles/cinta/cinta.css">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./styles/menu compras/menu_compras.css">
 </head>
 <body>
-    <div class="cinta-container">
-        <div class="cinta-contenido">
-            <span>最新ニュース： </span>
-            <span>Oferta especial este fin de semana - </span>
-            <span>Nuevos productos disponibles - </span>
-            <span>Mantente informado con nuestras actualizaciones - </span>
-            <span>Visita nuestra tienda online - </span>
+    <!-- Botón flotante para abrir el carrito -->
+    <button class="cart-button" id="cartButton">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count">0</span>
+    </button>
+
+    
+
+    <!-- Carrito de compras -->
+    <div class="shopping-cart" id="shoppingCart">
+        <div class="cart-header">
+            <h2>Tu Carrito</h2>
+            <button class="close-cart" id="closeCart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Los productos se agregarán aquí dinámicamente -->
+            <p class="empty-cart-message">Tu carrito está vacío</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="total-amount">$0.00</span>
+            </div>
+            <button class="checkout-btn">Finalizar Compra</button>
         </div>
     </div>
 
-    <script src="/components/JavaScript/cinta.js"></script>
+    <!-- Productos de ejemplo -->
+    <div class="products">
+        <div class="product">
+            <h3>Producto 1</h3>
+            <p>$19.99</p>
+            <button class="add-to-cart" data-id="1" data-name="Producto 1" data-price="19.99">Añadir al carrito</button>
+        </div>
+        <div class="product">
+            <h3>Producto 2</h3>
+            <p>$24.99</p>
+            <button class="add-to-cart" data-id="2" data-name="Producto 2" data-price="24.99">Añadir al carrito</button>
+        </div>
+    </div>
+
+    <script src="./components/JavaScript/menu_compras.js"></script>
 </body>
 </html>

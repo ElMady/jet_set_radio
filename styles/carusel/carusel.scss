@@ -1,7 +1,7 @@
+@use '../mixins/mixins.scss' as mix;
 
 .carrusel {
     position: relative;
-    max-width: 50vh;
     max-height: 60%;
     margin: auto;
     overflow: hidden;
@@ -77,4 +77,43 @@
 .indicador.active {
     background-color: #32fe21;
     display: flex;
+}
+
+@include mix.phones{
+    .carrusel{
+        width: 95%;
+    }
+
+    .carrusel-item img {
+    width: 80%vw;
+   
+}
+
+}
+
+@include mix.tv{
+    .carrusel{
+        height: 100vh;
+        width: 80vh;
+        .carrusel-inner{
+            width: 80vh;
+
+        }
+    }
+
+    .carrusel-item img {
+    width: 100%;
+    height: 80vh;
+}
+}
+
+@include mix.monitor{
+    .carrusel{
+        width: 50vw;
+        height: 80vh;
+    }
+    .carrusel-item img {
+    width: 100%;
+    height: 75vh;
+}
 }
