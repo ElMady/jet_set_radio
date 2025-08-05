@@ -408,6 +408,114 @@ body {
     margin-top: 0;
   }
 }
+.bottom_button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #f7af0c;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+}
+
+.bottom_button:hover {
+  background-color: rgba(247, 175, 12, 0.5019607843);
+}
+
+.store-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  background-color: #f7af0c;
+  color: white;
+  transition: left 0.3s;
+  z-index: 900;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 800;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Clase para deshabilitar el scroll */
+.no-scroll {
+  overflow: hidden;
+}
+
+/* Modificación para el menú cuando está activo */
+.store-menu.active {
+  left: 0;
+}
+
+.car_header {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  align-content: center;
+}
+.car_header button {
+  background-color: rgba(50, 254, 33, 0.5019607843);
+}
+
+.close-menu-btn {
+  cursor: pointer;
+  width: 10%;
+  height: 100%;
+  z-index: 950;
+  transition: transform 0.3s;
+}
+
+.close-menu-btn:hover {
+  transform: scale(1.2);
+}
+
+/* Estilos para los items del carrito */
+.cart-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cart-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.cart-item span {
+  color: white;
+  font-size: 0.9rem;
+}
+
+/* Estilo para el contenedor de items */
+#storeItems {
+  max-height: 70vh;
+  overflow-y: auto;
+  padding: 10px;
+}
+
 html {
   width: 100%;
   height: 100%;

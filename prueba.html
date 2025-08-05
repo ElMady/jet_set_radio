@@ -3,52 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito de Compras</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="./styles/menu compras/menu_compras.css">
+    <title>Tienda con Carrito</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Botón flotante para abrir el carrito -->
-    <button class="cart-button" id="cartButton">
-        <i class="fas fa-shopping-cart"></i>
-        <span class="cart-count">0</span>
-    </button>
+    <!-- Botón flotante del carrito -->
+    <button class="bottom_button">🛒</button>
 
-    
-
-    <!-- Carrito de compras -->
-    <div class="shopping-cart" id="shoppingCart">
-        <div class="cart-header">
-            <h2>Tu Carrito</h2>
-            <button class="close-cart" id="closeCart">&times;</button>
-        </div>
+    <!-- Menú del carrito -->
+    <div class="store-menu">
+        <div class="cart-header">Carrito de Compras</div>
         <div class="cart-items" id="cartItems">
-            <!-- Los productos se agregarán aquí dinámicamente -->
-            <p class="empty-cart-message">Tu carrito está vacío</p>
-        </div>
-        <div class="cart-footer">
-            <div class="cart-total">
-                <span>Total:</span>
-                <span class="total-amount">$0.00</span>
-            </div>
-            <button class="checkout-btn">Finalizar Compra</button>
+            <!-- Los productos agregados aparecerán aquí -->
         </div>
     </div>
 
-    <!-- Productos de ejemplo -->
-    <div class="products">
-        <div class="product">
+    <!-- Overlay -->
+    <div class="menu-overlay"></div>
+
+    <!-- Catálogo de productos -->
+    <div class="catalogo">
+        <div class="producto">
+            <img src="https://via.placeholder.com/200" alt="Producto 1">
             <h3>Producto 1</h3>
-            <p>$19.99</p>
-            <button class="add-to-cart" data-id="1" data-name="Producto 1" data-price="19.99">Añadir al carrito</button>
+            <p>Descripción del producto 1</p>
+            <p>$10.00</p>
+            <button class="add_button" data-id="1" data-name="Producto 1" data-price="10" data-img="https://via.placeholder.com/200">Agregar al carrito</button>
         </div>
-        <div class="product">
+        <div class="producto">
+            <img src="https://via.placeholder.com/200" alt="Producto 2">
             <h3>Producto 2</h3>
-            <p>$24.99</p>
-            <button class="add-to-cart" data-id="2" data-name="Producto 2" data-price="24.99">Añadir al carrito</button>
+            <p>Descripción del producto 2</p>
+            <p>$15.00</p>
+            <button class="add_button" data-id="2" data-name="Producto 2" data-price="15" data-img="https://via.placeholder.com/200">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+            <img src="https://via.placeholder.com/200" alt="Producto 3">
+            <h3>Producto 3</h3>
+            <p>Descripción del producto 3</p>
+            <p>$20.00</p>
+            <button class="add_button" data-id="3" data-name="Producto 3" data-price="20" data-img="https://via.placeholder.com/200">Agregar al carrito</button>
         </div>
     </div>
 
-    <script src="./components/JavaScript/menu_compras.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

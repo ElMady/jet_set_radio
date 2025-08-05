@@ -82,7 +82,7 @@
     width: 80% vw;
   }
 }
-@media (width: 1700px) {
+@media (width: 1360px) {
   .carrusel {
     height: 100vh;
     width: 80vh;
