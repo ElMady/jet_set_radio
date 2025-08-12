@@ -1,6 +1,6 @@
 export function setupMenu() {
-  const menuButton = document.getElementById('menu-button');
-  const submenu = document.getElementById('submenu');
+  const menuButton = document.getElementById('menu__button');
+  const submenu = document.getElementById('menu__button--submenu');
 
   // Mostrar/ocultar submenú al hacer clic en el botón
   menuButton.addEventListener('click', () => {

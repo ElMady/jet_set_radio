@@ -39,7 +39,7 @@
 }
 
 @mixin phones{
-    @media  (max-width:430px){
+    @media  (max-width:480px){
         @content
     }
 }
@@ -55,3 +55,10 @@
         @content
     }   
     }
+
+/// Desktop grande (≥ 1440px) - Monitores externos grandes
+@mixin desktop-large {
+  @media (min-width: 1440px) {
+    @content;
+  }
+}

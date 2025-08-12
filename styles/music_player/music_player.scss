@@ -1,43 +1,54 @@
 @use '../mixins/mixins.scss' as mix;
 
-.music_player_3d{
+.musicplayer_3d{
     min-height: 40vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    flex-direction: column;
 }
-.player {
+
+.musicplayer__3d--3dmodel{
+    width: 50%;
+    height: 500px;
+}
+
+.musicplayer {
     background: #e4fe0380;
     padding: 20px;
     border-radius: 10px;
     //box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 40%;
+    width: 80%;
     overflow: hidden;
 }
 
-.controls{
-    border-radius: 10px;
+.musicplayer__controls{
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.controls button {
+.musicplayer__controls button {
     background: (#32fe21);
-    border-radius: 50px;
+    border-radius: 50%;
     font-size: 20px;
     cursor: pointer;
     width: 7vw;
+    height: auto;
     & img{
         width: 4vw;
     }
    
 }
 
-.progress-container {
+.musicplayer__pbar {
     margin: 10px 0;
 }
 
-/* Estilo base del input range */
-#progress {
+
+.musicplayer__pbar--progress {
     width: 100%;
     -webkit-appearance: none; /* Elimina el estilo por defecto en Chrome/Safari */
     width: 100%;
@@ -47,8 +58,7 @@
     outline: none; 
 }
 
-/* Thumb (el círculo deslizable) */
-#progress::-webkit-slider-thumb {
+.musicplayer__pbar--progress::-webkit-slider-thumb {
     -webkit-appearance: none;
     width: 16px;
     height: 16px;
@@ -59,15 +69,13 @@
     border: 2px solid white;
 }
 
-
-
-.volume {
+.musicplayer__volume {
     margin: 2px 0;
 
 }
 
 
-#volume {
+.musicplayer__volume--range {
     -webkit-appearance: none; /* Elimina el estilo por defecto */
     width: 50%;
     height: 6px;
@@ -75,13 +83,9 @@
     border-radius: 3px;
     outline: none;
     transition: opacity 0.2s;
-    & img{
-        
-    }
 }
 
-/* Thumb (control deslizante) */
-#volume::-webkit-slider-thumb {
+.musicplayer__volume--range::-webkit-slider-thumb {
     -webkit-appearance: none;
     width: 16px;
     height: 16px;
@@ -93,32 +97,24 @@
     transition: transform 0.1s;
 }
 
-.songs {
-    list-style: none;
-    padding: 0;
-}
-
-.songs li {
-    padding: 10px;
-    cursor: pointer;
-    border-bottom: 1px solid #eee;
-}
-
-.songs li:hover {
-    background-color: #e4fe03;
-}
-
 @include mix.phones{
-    .music_player_3d{
+    .musicplayer_3d{
         max-height: 15%;
         width: 95%;
-        
     }
+
+    .musicplayer{
+    height: 20%;
 }
 
-@include mix.tv {
-    .player{
-        width: 45%;
-        height: 30vh;
+    .musicplayer__3d--3dmodel{
+    width: 50%;
+    height: 200px;
+   }
+}
+
+@include mix.desktop-large {
+    .musicplayer__3d--3dmodel{
+        height: 1000px;
     }
 }

@@ -2,7 +2,6 @@
 .about_us{
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
     margin-top: 80px;
     height: 100%;
@@ -16,28 +15,66 @@
    
 }
 
-.spanish{
+.about_us--spanish{
     background-color: (#32fe2180);
     width: 95%;
 }
-.english{
+.about_us--english{
     background-color: (#f7af0c80);
     width: 95%;
 }
 
 
 #logo-ax{
-    height: 25vh;
+    height: 35%;
 }
 
 @include mix.phones{
     .about_us{
-        height: 60%;
+        width: 100%;
+        height: auto;
         margin-top: 0;
+    }
+    .about_us--spanish{
+        width: 80%;
+    }
+    .about_us--english{
+        background-color: (#f7af0c80);
+        width: 80%;
+    }
+
+    #logo-ax{
+    width: 50%;
+}
+
+    footer{
+        min-height: 5%;
     }
 
 }
 
 @include mix.monitor{
+      .about_us{
+        width: 100%;
+        height: auto;
+        margin-top: 0;
+    }
+        .about_us--spanish{
+            width: 80%;
+            height: auto;
+    }
+        .about_us--english{
+            background-color: (#f7af0c80);
+            width: 80%;
+            height: auto;
+    }
+
+        #logo-ax{
+        width: 30%;
+    }
+
+        footer{
+            min-height: 15%;
+    }
 
 }

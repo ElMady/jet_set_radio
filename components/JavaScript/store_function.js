@@ -1,71 +1,113 @@
 export function store_car() {
-    const bottomButton = document.querySelector('.bottom_button');
-    const storeMenu = document.getElementById('storeMenu');
-    const overlay = document.getElementById('overlay');
-    const closeButton = document.querySelector('.close-menu-btn');
-    const storeItems = document.getElementById('storeItems');
-    const cartCounter = document.getElementById('cartCounter');
-    
+    // 1. Selección segura de elementos con verificación
+    const elements = {
+        bottomButton: document.querySelector('.bottom__button'),
+        store__Menu: document.getElementById('store__Menu'),
+        overlay: document.getElementById('overlay'),
+        closeButton: document.querySelector('.store__Menu--header--closebtn'),
+        storeItems: document.getElementById('storeItems'),
+        carCounter: document.getElementById('carCounter'),
+        addButtons: document.querySelectorAll('.add_button')
+    };
+
+    // 2. Verificación exhaustiva de elementos requeridos
+    const requiredElements = ['bottomButton', 'store__Menu', 'overlay', 'closeButton', 'storeItems', 'carCounter'];
+    const missingElements = requiredElements.filter(key => !elements[key]);
+
+    if (missingElements.length > 0) {
+        console.warn('Elementos faltantes para el carrito:', missingElements);
+        return; // Salir si faltan elementos esenciales
+    }
+
+    // 3. Extraer elementos ya verificados
+    const {
+        bottomButton,
+        store__Menu,
+        overlay,
+        closeButton,
+        storeItems,
+        carCounter,
+        addButtons
+    } = elements;
+
     let itemCount = 0;
 
-    // Función para actualizar el contador
-    function updateCounter() {
-        cartCounter.textContent = itemCount;
-        // Mostrar u ocultar el contador según si hay items
-        cartCounter.style.display = itemCount > 0 ? 'inline-block' : 'none';
-    }
+    // 4. Función protegida para actualizar contador
+    const updateCounter = () => {
+        try {
+            carCounter.textContent = itemCount;
+            carCounter.style.visibility = itemCount > 0 ? 'visible' : 'hidden';
+        } catch (error) {
+            console.error('Error actualizando contador:', error);
+        }
+    };
 
-    // Función para agregar productos al carrito
-    function addToCart(productElement) {
-        const productImg = productElement.querySelector('img').src;
-        const productName = productElement.querySelector('h3').textContent;
-        const productPrice = productElement.querySelector('.car_function p').textContent.replace('Price: ', '');
-        
-        const cartItem = document.createElement('div');
-        cartItem.className = 'cart-item';
-        cartItem.innerHTML = `
-            <img src="${productImg}" alt="${productName}">
-            <div>
-                <h4>${productName}</h4>
-                <p>${productPrice}</p>
-            </div>
-            <button class="remove-item-btn">×</button>
-        `;
-          const removeBtn = cartItem.querySelector('.remove-item-btn');
-        removeBtn.addEventListener('click', () => {
-            cartItem.remove();
-            itemCount--;
+    // 5. Función segura para añadir productos
+    const addToCart = (productElement) => {
+        try {
+            // Verificación de elementos del producto
+            const productImg = productElement.querySelector('img')?.src;
+            const productName = productElement.querySelector('h3')?.textContent;
+            const priceElement = productElement.querySelector('.catalogo__productos--description--button p');
+            const productPrice = priceElement?.textContent.replace('Price: ', '');
+
+            if (!productImg || !productName || !productPrice) {
+                throw new Error('Elementos del producto no encontrados');
+            }
+
+            // Creación del item del carrito
+            const cartItem = document.createElement('div');
+            cartItem.className = 'store__Menu--list--items';
+            cartItem.innerHTML = `
+                <img src="${productImg}" alt="${productName}">
+                <div class="store__Menu--list--items--info">
+                    <h4>${productName}</h4>
+                    <p>${productPrice}</p>
+                </div>
+                <button class="remove-item-btn" aria-label="Eliminar producto">×</button>
+            `;
+
+            // Evento para eliminar producto
+            const removeBtn = cartItem.querySelector('.remove-item-btn');
+            removeBtn.addEventListener('click', () => {
+                cartItem.remove();
+                itemCount = Math.max(0, itemCount - 1); // Prevenir valores negativos
+                updateCounter();
+            });
+
+            storeItems.appendChild(cartItem);
+            itemCount++;
             updateCounter();
-        });
-        storeItems.appendChild(cartItem);
-        
-        // Incrementar el contador
-        itemCount++;
-        updateCounter();
-    }
+        } catch (error) {
+            console.error('Error añadiendo al carrito:', error);
+        }
+    };
 
-    // Event listeners para los botones "Añadir"
-    document.querySelectorAll('.add_button').forEach(button => {
-        button.addEventListener('click', function() {
-            const product = this.closest('.product');
-            addToCart(product);
+    // 6. Event listeners protegidos para botones "Añadir"
+    addButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            const product = e.currentTarget.closest('.catalogo__productos');
+            if (product) {
+                addToCart(product);
+            } else {
+                console.warn('No se encontró el producto asociado al botón');
+            }
         });
     });
 
-    if (bottomButton && storeMenu && overlay && closeButton) {
-        bottomButton.addEventListener('click', () => {
-            storeMenu.classList.add('active');
-            overlay.classList.add('active');
-            document.body.classList.add('no-scroll');
-        });
+    // 7. Control del menú lateral
+    bottomButton.addEventListener('click', () => {
+        store__Menu.classList.add('active');
+        overlay.classList.add('active');
+        document.body.classList.add('no-scroll');
+    });
 
-        closeButton.addEventListener('click', () => {
-            storeMenu.classList.remove('active');
-            overlay.classList.remove('active');
-            document.body.classList.remove('no-scroll');
-        });
-    }
-    
-    // Inicializar el contador
+    closeButton.addEventListener('click', () => {
+        store__Menu.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.classList.remove('no-scroll');
+    });
+
+    // 8. Inicialización
     updateCounter();
 }

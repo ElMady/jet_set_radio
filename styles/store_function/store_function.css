@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.bottom_button {
+.bottom__button {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -13,11 +13,11 @@
   transition: all 0.3s;
 }
 
-.bottom_button:hover {
+.bottom__button:hover {
   background-color: rgba(247, 175, 12, 0.5019607843);
 }
 
-.store-menu {
+.store__Menu {
   position: fixed;
   top: 0;
   left: -100%;
@@ -54,21 +54,21 @@
 }
 
 /* Modificación para el menú cuando está activo */
-.store-menu.active {
+.store__Menu.active {
   left: 0;
 }
 
-.car_header {
+.store__Menu--header {
   display: flex;
   height: 100%;
   justify-content: space-between;
   align-content: center;
 }
-.car_header button {
+.store__Menu--header button {
   background-color: rgba(50, 254, 33, 0.5019607843);
 }
 
-.close-menu-btn {
+.store__Menu--header--closebtn {
   cursor: pointer;
   width: 10%;
   height: 100%;
@@ -76,28 +76,44 @@
   transition: transform 0.3s;
 }
 
-.close-menu-btn:hover {
+.store__Menu--header--closebtn:hover {
   transform: scale(1.2);
 }
 
 /* Estilos para los items del carrito */
-.cart-item {
-  display: flex;
+.store__Menu--list {
   align-items: center;
   padding: 10px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
 }
 
-.cart-item img {
+.store__Menu--list--items {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.store__Menu--list--items img {
   width: 50px;
   height: 50px;
   object-fit: cover;
   margin-right: 15px;
 }
-
-.cart-item span {
+.store__Menu--list--items span {
   color: white;
   font-size: 0.9rem;
+}
+
+.store__Menu--list--items--info {
+  flex-grow: 1;
+}
+.store__Menu--list--items--info h4 {
+  margin: 0;
+  font-size: 16px;
+}
+.store__Menu--list--items--info p {
+  margin: 5px 0 0;
+  color: #666;
 }
 
 /* Estilo para el contenedor de items */
@@ -107,7 +123,7 @@
   padding: 10px;
 }
 
-.cart-counter {
+.bottom__button--cartcounter {
   position: absolute;
   top: -5px;
   right: -5px;
@@ -117,22 +133,15 @@
   width: 20px;
   height: 20px;
   font-size: 12px;
-  display: flex;
+  display: flex !important; /* Fuerza la visualización */
   align-items: center;
   justify-content: center;
-  display: none;
+  visibility: visible;
+  opacity: 1;
 }
 
-.cart-icon {
+.bottom__button--carticon {
   display: block;
-}
-
-.cart-item {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  border-bottom: 1px solid #eee;
-  position: relative;
 }
 
 .remove-item-btn {
@@ -154,23 +163,71 @@
   background: #cc0000;
 }
 
-.cart-item img {
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
-  margin-right: 15px;
+@media (min-width: 1440px) {
+  .bottom__button {
+    width: 150px;
+    height: 150px;
+  }
+  .bottom__button--carticon {
+    font-size: 8em;
+  }
+  .store__Menu {
+    height: 15%;
+  }
+  .store__Menu--header {
+    font-size: 5rem;
+  }
+  .store__Menu--header--closebtn {
+    font-size: 3rem;
+    color: white;
+    width: 2.5vw;
+    height: 5vh;
+  }
+  .store__Menu--list {
+    width: 100%;
+    height: auto;
+    background-color: #f7af0c;
+  }
+  .store__Menu--list--items {
+    align-items: flex-start;
+    height: 90%;
+    background-color: #f7af0c;
+    min-width: none;
+    border-top: solid 1px black;
+  }
+  .store__Menu--list--items img {
+    height: 100%;
+    width: 20%;
+  }
+  .store__Menu--list--items--info {
+    font-size: 4em;
+  }
+  .store__Menu--list--items--info h4 {
+    margin: 0;
+    font-size: 5rem;
+  }
+  .remove-item-btn {
+    width: 100px;
+    height: 100px;
+    font-size: 3em;
+  }
+  .catalogo__productos--description h3 {
+    font-size: 3rem;
+  }
+  .catalogo__productos--description--button p {
+    font-size: 3em;
+  }
+  .catalogo__productos--description--button button {
+    width: 20%;
+  }
+  .bottom__button--cartcounter {
+    width: 75px;
+    height: 75px;
+    font-size: 4em;
+  }
 }
-
-.cart-item-info {
-  flex-grow: 1;
-}
-
-.cart-item-info h4 {
-  margin: 0;
-  font-size: 16px;
-}
-
-.cart-item-info p {
-  margin: 5px 0 0;
-  color: #666;
+@media (max-width: 480px) {
+  .store__Menu {
+    min-width: 70vw;
+  }
 }/*# sourceMappingURL=store_function.css.map */

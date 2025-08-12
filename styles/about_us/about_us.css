@@ -1,7 +1,6 @@
 .about_us {
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
   margin-top: 80px;
   height: 100%;
@@ -12,23 +11,59 @@
   padding: 10px;
 }
 
-.spanish {
+.about_us--spanish {
   background-color: rgba(50, 254, 33, 0.5019607843);
   width: 95%;
 }
 
-.english {
+.about_us--english {
   background-color: rgba(247, 175, 12, 0.5019607843);
   width: 95%;
 }
 
 #logo-ax {
-  height: 25vh;
+  height: 35%;
 }
 
-@media (max-width: 430px) {
+@media (max-width: 480px) {
   .about_us {
-    height: 60%;
+    width: 100%;
+    height: auto;
     margin-top: 0;
+  }
+  .about_us--spanish {
+    width: 80%;
+  }
+  .about_us--english {
+    background-color: rgba(247, 175, 12, 0.5019607843);
+    width: 80%;
+  }
+  #logo-ax {
+    width: 50%;
+  }
+  footer {
+    min-height: 5%;
+  }
+}
+@media (min-width: 1920px) {
+  .about_us {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+  }
+  .about_us--spanish {
+    width: 80%;
+    height: auto;
+  }
+  .about_us--english {
+    background-color: rgba(247, 175, 12, 0.5019607843);
+    width: 80%;
+    height: auto;
+  }
+  #logo-ax {
+    width: 30%;
+  }
+  footer {
+    min-height: 15%;
   }
 }/*# sourceMappingURL=about_us.css.map */

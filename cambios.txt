@@ -1,0 +1,75 @@
+
+CAMBIOS MAYORES 
+    Header ------------------------------------------------------------------------------------------------------
+    1.-Se creo header, se introdujo nav dentrode el , se elimino el div dentro de nav y se le agrego la clase del div eliminado.
+ 
+    body -------------------------------------------------------------------------------------------------------------
+    1.- se agrego main
+
+    
+
+CAMBIOS CALASE E ID
+ cambio de nombre de clase
+                
+        nav---------------------------------------- 
+                > nav_logo // header_logo 
+                > menu
+                > menu-button // menu__button
+                > submenu // menu__button--submenu
+        cinta-----------------------------------
+                 > cinta-container a cinta
+                 > cinta_contenido a cinta_container
+        carrusel----------------------------------
+                 >carrusel-inner // carrusel__inner
+                 >carrusel-item // carrusel__inner--item
+                 >carrusel-indicadores // carrusel__indicadores
+                 >indicador // carrusel__indicadores--selector
+        musicplayer ---------------------------------------------
+                >music_Player_3d // musicplayer_3d
+                >player //musicplayer
+                Nuevas classes
+                >musicplayer__controls--play
+                >musicplayer__controls--prev
+                >musicplayer__controls--next
+                >musicplayer__pbar--progress
+                >musicplayer__pbar--time
+                >musicplayer__pbar--duration
+                >musicplayer__volume--range
+        store_function ------------------------------------------
+                >catalogo
+                >catologo__productos
+                >catalogo_productos--description
+                >catalogo__productos--description--button
+                >bottom-button // bottom__buttom
+                >car-icon // bottom__buttom--carticon
+                >cartCounter // bottom_button--cartCounter
+                >store_menu // store__Menu
+                >car_header // store__Menu--header
+                >close-menu-btn // store__Menu--header--closebtn
+                >cart_item // store__Menu--items
+        about_us
+                >spanish  // about_us--spanish
+                >english  // about_us--english
+                
+
+
+                
+
+
+cambio de id 
+        nav-------------------------------------------
+            > menu-button a menu__button
+            > submenu a menu__button--submenu
+            > se elimino id barras
+        MUSICPLAYER----------------------------------
+                se eliminaron:
+                >play
+                >prev
+                >next
+                >progress
+                >time
+                >duration
+                >range
+
+
+

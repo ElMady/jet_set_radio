@@ -8,19 +8,23 @@
     <title>Jet_Set_Radio</title>
 </head>
     <body>
-        <nav>
-            <img class="nav_logo" src="./global/logo.svg">      
-            <div class="menu-container">
-                <button class="menu-button"  id="menu-button"><i id="barras" class="fa-solid fa-bars "></i></button>
-                <ul id="submenu" class="submenu">
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/store.html">Store</a></li>
-                    <li><a href="/about.html">about us</a></li>
-                </ul>
-            </div>
+
+    <!-- ! barra superior navegacion !--->
+     <header>
+        <img class="header__logo" src="./global/logo.svg"> 
+         <nav class="menu">     
+            <button class="menu__button"  id="menu__button"><i id="barras" class="fa-solid fa-bars "></i></button>
+             <ul id="menu__button--submenu" class="menu__button--submenu">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/store.html">Store</a></li>
+                <li><a href="/about.html">about us</a></li>
+            </ul>
         </nav>
-        <div class="cinta-container">
-            <div class="cinta-contenido">
+    </header>
+
+    <!-- ? cinta mensaje superior !--->
+        <div class="cinta">
+            <div class="cinta__container">
                 <span>最新ニュース：</span>
                 <span>今週末の特別オファー - </span>
                 <span>新製品が入手可能 -</span>
@@ -28,9 +32,9 @@
                 <span> オンラインストアをご覧ください -</span>
             </div>
         </div>
-
+    <!-- Mensaje-->
         <div class="about_us">
-            <div class="spanish">
+            <div class="about_us--spanish">
                 <p>Somos un estudio de diseño web independiente recién fundado, enfocado en crear productos digitales funcionales y con estilo. Nuestra filosofía combina usabilidad, estética limpia y soluciones innovadoras para marcas, emprendedores y proyectos creativos.</p>
                 <p>🎨 Sobre el arte en esta demo:
                 Esta página es un ejemplo conceptual y no comercial. Todo el arte utilizado es de terceros y se emplea únicamente con fines ilustrativos. No reclamamos autoría ni buscamos lucrar con estas obras.</p>
@@ -44,7 +48,7 @@
 
         
             </div>
-            <div class="english">
+            <div class="about_us--english">
                 <p>
                 We’re a newly founded independent web design studio focused on crafting functional, stylish digital products. Our work blends usability, clean aesthetics, and innovative solutions for brands, entrepreneurs, and creative projects.
                 </p>
@@ -63,18 +67,13 @@
                 </p>
                 </pre>
             </div>
-            <img id="logo-ax" src="/global/logo-ax.svg">
-           
+            <img id="logo-ax" src="/global/logo-ax.svg">   
         </div>
         
-        <div>
-            <div class="img_container">
-                <img src="">
-            </div>
-        </div>
-       
-        <div class="cinta-container">
-            <div class="cinta-contenido">
+    
+       <!-- ? cinta mensaje inferior !--->
+       <div class="cinta">
+            <div class="cinta__container">
                 <span>最新ニュース：</span>
                 <span>今週末の特別オファー - </span>
                 <span>新製品が入手可能 -</span>
@@ -82,6 +81,8 @@
                 <span> オンラインストアをご覧ください -</span>
             </div>
         </div>
+
+        <!-- ! FOOTER ----------------------------------------------------->
         <footer>
         <div>
             <img src="/global/logo0.svg">

@@ -3,16 +3,16 @@
 // Contenedores padre de los productos
 .catalogo{
     display: flex;
-    height: 100%;
+    height: auto;
     width: 100%;
 }
 
 // ? Contenedro secudndario imagen, nombre, precio y boton
-.product{
+.catalogo__productos{
     display: flex;
     flex-direction: column;
     width: 33%;
-    height: 33%;
+    min-height: 33%;
     background-color:#e4fe0380;
     box-sizing: border-box;
     border-radius: 5px;
@@ -34,8 +34,8 @@
     background-color: #32fe2180;
 }
 
-//Todo contendor solamente paara nombre, precio y boton
-.description{
+//Todo contendor solamente para nombre, precio y boton
+.catalogo__productos--description{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,7 +43,7 @@
 }
 
 // ! contenedor para nombre y boton
-.car_function{
+.catalogo__productos--description--button{
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -57,7 +57,7 @@
 
 
 @include mix.tv{
-   .car_function{
+   .catalogo__productos--description--button{
     justify-content: space-evenly;
     & button{
         width: 10%;
@@ -67,7 +67,7 @@
 
 
 @include mix.monitor{
-    .car_function{
+    .catalogo__productos--description--button{
     & button{
         width: 10%;
     }

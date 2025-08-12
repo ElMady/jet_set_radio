@@ -1,5 +1,5 @@
 export function cinta() {
-    const cinta = document.querySelector('.cinta-contenido');
+    const cinta = document.querySelector('.cinta__container');
     
     // Pausar la animación cuando el mouse está sobre la cinta
     cinta.addEventListener('mouseenter', function() {

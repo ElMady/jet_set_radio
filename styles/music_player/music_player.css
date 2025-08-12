@@ -1,41 +1,49 @@
-@charset "UTF-8";
-.music_player_3d {
+.musicplayer_3d {
   min-height: 40vh;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  flex-direction: column;
 }
 
-.player {
+.musicplayer__3d--3dmodel {
+  width: 50%;
+  height: 500px;
+}
+
+.musicplayer {
   background: rgba(228, 254, 3, 0.5019607843);
   padding: 20px;
   border-radius: 10px;
   text-align: center;
-  width: 40%;
+  width: 80%;
   overflow: hidden;
 }
 
-.controls {
-  border-radius: 10px;
+.musicplayer__controls {
+  border-radius: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.controls button {
+.musicplayer__controls button {
   background: #32fe21;
-  border-radius: 50px;
+  border-radius: 50%;
   font-size: 20px;
   cursor: pointer;
   width: 7vw;
+  height: auto;
 }
-.controls button img {
+.musicplayer__controls button img {
   width: 4vw;
 }
 
-.progress-container {
+.musicplayer__pbar {
   margin: 10px 0;
 }
 
-/* Estilo base del input range */
-#progress {
+.musicplayer__pbar--progress {
   width: 100%;
   -webkit-appearance: none; /* Elimina el estilo por defecto en Chrome/Safari */
   width: 100%;
@@ -45,8 +53,7 @@
   outline: none;
 }
 
-/* Thumb (el círculo deslizable) */
-#progress::-webkit-slider-thumb {
+.musicplayer__pbar--progress::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 16px;
   height: 16px;
@@ -57,11 +64,11 @@
   border: 2px solid white;
 }
 
-.volume {
+.musicplayer__volume {
   margin: 2px 0;
 }
 
-#volume {
+.musicplayer__volume--range {
   -webkit-appearance: none; /* Elimina el estilo por defecto */
   width: 50%;
   height: 6px;
@@ -70,8 +77,8 @@
   outline: none;
   transition: opacity 0.2s;
 }
-/* Thumb (control deslizante) */
-#volume::-webkit-slider-thumb {
+
+.musicplayer__volume--range::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 16px;
   height: 16px;
@@ -83,30 +90,21 @@
   transition: transform 0.1s;
 }
 
-.songs {
-  list-style: none;
-  padding: 0;
-}
-
-.songs li {
-  padding: 10px;
-  cursor: pointer;
-  border-bottom: 1px solid #eee;
-}
-
-.songs li:hover {
-  background-color: #e4fe03;
-}
-
-@media (max-width: 430px) {
-  .music_player_3d {
+@media (max-width: 480px) {
+  .musicplayer_3d {
     max-height: 15%;
     width: 95%;
   }
+  .musicplayer {
+    height: 20%;
+  }
+  .musicplayer__3d--3dmodel {
+    width: 50%;
+    height: 200px;
+  }
 }
-@media (width: 1360px) {
-  .player {
-    width: 45%;
-    height: 30vh;
+@media (min-width: 1440px) {
+  .musicplayer__3d--3dmodel {
+    height: 1000px;
   }
 }/*# sourceMappingURL=music_player.css.map */

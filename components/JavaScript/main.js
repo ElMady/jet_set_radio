@@ -7,10 +7,9 @@ import {store_car} from "./store_function.js";
 //configuracion de menu cuando el DOM este listo
 
 document.addEventListener('DOMContentLoaded', () => {
-    store_car();
     setupMenu();
-    Carrusel();
-    music_Player();
     cinta();
-    
+    if(document.querySelector('.store__Menu')) {store_car();}
+    if(document.querySelector('.carrusel__inner')) {Carrusel();}
+    if(document.querySelector('.musicplayer_3d')) {music_Player();}
 })

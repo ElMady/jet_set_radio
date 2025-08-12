@@ -1,9 +1,9 @@
 export function Carrusel () {
-    const carruselInner = document.querySelector('.carrusel-inner');
-    const items = document.querySelectorAll('.carrusel-item');
+    const carruselInner = document.querySelector('.carrusel__inner');
+    const items = document.querySelectorAll('.carrusel__inner--item');
     const prevBtn = document.querySelector('.prev');
     const nextBtn = document.querySelector('.next');
-    const indicadores = document.querySelectorAll('.indicador');
+    const indicadores = document.querySelectorAll('.carrusel__indicadores--selector');
     
     let currentIndex = 0;
     const totalItems = items.length;

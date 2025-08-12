@@ -1,14 +1,14 @@
 export function music_Player(){
 // Elementos del DOM
 const audio = document.getElementById('audio');
-const playBtn = document.getElementById('play');
-const prevBtn = document.getElementById('prev');
-const nextBtn = document.getElementById('next');
-const progress = document.getElementById('progress');
-const currentTimeEl = document.getElementById('current-time');
-const durationEl = document.getElementById('duration');
-const volumeControl = document.getElementById('volume');
-const songsList = document.getElementById('songs');
+const playBtn = document.getElementsByClassName('musicplayer__controls--play')[0];
+const prevBtn = document.getElementsByClassName('musicplayer__controls--prev')[0];
+const nextBtn = document.getElementsByClassName('musicplayer__controls--next')[0];
+const progress = document.getElementsByClassName('musicplayer__pbar--progress')[0];
+const currentTimeEl = document.getElementsByClassName('musicplayer__pbar--time')[0];
+const durationEl = document.getElementsByClassName('musicplayer__pbar--duration')[0];
+const volumeControl = document.getElementsByClassName('musicplayer__volume--range')[0];
+
 
 // Lista de canciones (puedes agregar más)
 const songs = [
@@ -25,8 +25,6 @@ let currentSongIndex = 0;
 function loadSong(songIndex) {
     const song = songs[songIndex];
     audio.src = song.src;
-    document.querySelector('.songs li.active')?.classList.remove('active');
-    document.querySelectorAll('.songs li')[songIndex].classList.add('active');
 }
 
 // Reproducir o pausar
@@ -96,13 +94,4 @@ audio.addEventListener('ended', nextSong); // Siguiente canción al terminar
 // Cargar primera canción
 loadSong(currentSongIndex);
 
-// Seleccionar canción de la lista
-songsList.querySelectorAll('li').forEach((item, index) => {
-    item.addEventListener('click', () => {
-        currentSongIndex = index;
-        loadSong(currentSongIndex);
-        audio.play();
-        playBtn.textContent = '⏸';
-    });
-});
 }
