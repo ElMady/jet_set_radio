@@ -1,0 +1,11 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "18"  # Versión LTS recomendada (Node 16 ya no tiene soporte)
+  NPM_FLAGS = "--production=false"  # Para instalar devDependencies (necesario para Sass)
+
+# Opcional: Configuración específica para Sass
+[build.environment]
+  SASS_OPTIONS = "--quiet-deps --no-source-map"  # Silencia warnings y desactiva sourcemaps
