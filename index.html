@@ -28,7 +28,7 @@
    
     <main>
         <!-- ? cinta mensaje superior************************************************************************** !--->
-        <div class="cinta">
+        <article class="cinta">
             <div class="cinta__container">
                 <span>最新ニュース：</span>
                 <span>今週末の特別オファー - </span>
@@ -36,11 +36,11 @@
                 <span>最新情報をお届けします -</span>
                 <span> オンラインストアをご覧ください -</span>
             </div>
-        </div>
+        </article>
         
         <!-- TODO carusel ************************************************************************************** !-->
-        <div class="carrusel">
-            <div class="carrusel__inner">
+        <article class="carrusel">
+            <section class="carrusel__inner">
                 <div class="carrusel__inner--item">
                     <img src="./global/charachters/BEAT.png" alt="BEAT">
                 </div>
@@ -53,14 +53,14 @@
                 <div class="carrusel__inner--item">
                     <img src="./global/charachters/Mew-0.png" alt="MEW">
                 </div>
-            </div>
+            </section>
             
             <!-- Controles -->
             <button class="carrusel__control prev">&#10094;</button>
             <button class="carrusel__control next">&#10095;</button>
             
     <!-- Indicadores -->
-            <div class="carrusel__indicadores">
+            <section class="carrusel__indicadores">
         <!-- Indicador 1 (activo por defecto) -->
             <img class="carrusel__indicadores--selector active" data-slide-to="0"   src="./global/stocks-characters/beat.svg">
             </img>
@@ -76,23 +76,23 @@
         <!-- carrusel__indicadores--selector 4 -->
             <img class="carrusel__indicadores--selector" data-slide-to="3"  src="./global/stocks-characters/rhyth.svg">
             </img>
-            </div>
-        </div>
+            </section>
+        </article>
 
         <!-- music player *************************************************************************************** !-->
-        <div class="musicplayer_3d">
-            <!-- ! 3D Model --------------------------------------------------------------------------------------->
-                <model-viewer 
-                    src="./global/3d-object/scene.gltf" 
-                    alt="Modelo 3D" 
-                    ar 
-                    camera-controls
-                    class="musicplayer__3d--3dmodel"
-                    >
-                </model-viewer>
-
+        <article class="musicplayer_3d">
+            <!-- ! 3D Model --------------------------------------------------------------------------------------->     
+            <model-viewer 
+                        src="./global/3d-object/scene.gltf" 
+                        alt="Modelo 3D" 
+                        ar 
+                        camera-controls
+                        class="musicplayer__3d--3dmodel"
+                        >
+            </model-viewer>
+                
             <!-- TODO Music Player --------------------------------------------------------------------------->
-                <div class="musicplayer">
+                <section class="musicplayer">
                     <!-- Audio -->
                     <audio class="musicplayer__audio" id="audio"></audio>
                     <!-- Controles -->
@@ -112,11 +112,11 @@
                         <input type="range" class="musicplayer__volume--range" min="0" max="1" step="0.1" value="0.7">
                     </div>
                     
-                </div>
-        </div>
+                </section>
+        </article>
 
         <!-- ? cinta mensaje inferior************************************************************************** !--->
-        <div class="cinta">
+        <article class="cinta">
             <div class="cinta__container">
                 <span>最新ニュース：</span>
                 <span>今週末の特別オファー - </span>
@@ -124,15 +124,15 @@
                 <span>最新情報をお届けします -</span>
                 <span> オンラインストアをご覧ください -</span>
             </div>
-        </div>
+        </article>
     </main>
 
     <!-- ! FOOTER *********************************************************************************************** !-->
     <footer>
-        <div>
+        <article>
             <img src="/global/logo0.svg">
             <img src="/global/axolotl studio.svg">
-        </div>
+        </article>
         
         <p>
             Legal Disclaimer

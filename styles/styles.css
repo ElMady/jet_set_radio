@@ -719,7 +719,7 @@ footer {
   font: 400;
   font-size: 0.6rem;
 }
-footer div {
+footer article {
   display: flex;
   align-items: center;
   justify-content: center;
